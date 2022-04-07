@@ -1,0 +1,7 @@
+goos: linux
+goarch: amd64
+pkg: github.com/induzo/httpwrapper
+cpu: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz
+BenchmarkHTTPWrapper-8   	 4958841	       239.0 ns/op	     141 B/op	       1 allocs/op
+PASS
+ok  	github.com/induzo/httpwrapper	1.442s
