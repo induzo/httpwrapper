@@ -10,6 +10,7 @@ const (
 	ErrCodeParsingBody = "error_parsing_body"
 )
 
+// BindBody will bind the body of the request to the given interface.
 func BindBody(r *http.Request, target interface{}) *ErrorResponse {
 	// nolint: gocritic
 	// LATER: add more encodings

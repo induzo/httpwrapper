@@ -8,6 +8,7 @@ import (
 	"github.com/rs/zerolog"
 )
 
+// ErrorResponse is a wrapper for the error response body to have a clean way of displaying errors.
 type ErrorResponse struct {
 	Error          error  `json:"-"`
 	HTTPStatusCode int    `json:"-"`
@@ -15,6 +16,7 @@ type ErrorResponse struct {
 	ErrorMsg       string `json:"error_msg"`
 }
 
+// NewErrorResponse creates a new ErrorResponse.
 func NewErrorResponse(
 	e error,
 	hsc int,
@@ -39,6 +41,7 @@ func (her *ErrorResponse) render(log zerolog.Logger, w http.ResponseWriter, r *h
 	)
 }
 
+// IsEqual checks if an error response is equal to another.
 func (her *ErrorResponse) IsEqual(e1 *ErrorResponse) bool {
 	if !errors.Is(e1.Error, her.Error) {
 		return false
@@ -59,6 +62,7 @@ func (her *ErrorResponse) IsEqual(e1 *ErrorResponse) bool {
 	return true
 }
 
+// InternalServerError is an error that is returned when an internal server error occurs.
 type InternalServerError struct {
 	Err error
 }
@@ -71,6 +75,7 @@ func (e InternalServerError) ToErrorResponse() *ErrorResponse {
 	return NewErrorResponse(e, http.StatusInternalServerError, "internal_error", "internal error")
 }
 
+// NotFoundError is an error that is returned when a resource is not found.
 type NotFoundError struct {
 	Designation string
 }

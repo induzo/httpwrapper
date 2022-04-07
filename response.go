@@ -6,6 +6,7 @@ import (
 	"github.com/rs/zerolog"
 )
 
+// Response is a wrapper for the response body.
 type Response struct {
 	Body           any
 	HTTPStatusCode int

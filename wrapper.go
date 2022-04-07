@@ -8,8 +8,10 @@ import (
 	"github.com/rs/zerolog"
 )
 
+// TypedHandler is the handler that you are actually handling the response.
 type TypedHandler func(r *http.Request) (*Response, *ErrorResponse)
 
+// Wrapper will actually do the boring work of logging an error and render the response.
 func Wrapper(
 	log zerolog.Logger,
 	f TypedHandler,

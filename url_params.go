@@ -6,8 +6,10 @@ import (
 	"net/http"
 )
 
+// NamedURLParamsGetter is the interface that is used to parse the URL parameters.
 type NamedURLParamsGetter func(ctx context.Context, key string) (string, *ErrorResponse)
 
+// MissingParamError is the error that is returned when a named URL param is missing.
 type MissingParamError struct {
 	Name string
 }
@@ -25,6 +27,7 @@ func (e MissingParamError) ToErrorResponse() *ErrorResponse {
 	}
 }
 
+// ParsingParamError is the error that is returned when a named URL param is invalid.
 type ParsingParamError struct {
 	Name  string
 	Value string
