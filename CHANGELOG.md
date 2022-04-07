@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.2] - 2022-04-07
+
+### Miscellaneous Tasks
+
+- Go mod tidy
+
 ## [0.0.1] - 2022-04-07
 
 ### Features
