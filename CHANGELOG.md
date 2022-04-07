@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.3] - 2022-04-07
+
+### Documentation
+
+- Add comments for public functions
+
 ## [0.0.2] - 2022-04-07
 
 ### Miscellaneous Tasks
