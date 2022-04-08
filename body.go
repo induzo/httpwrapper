@@ -7,6 +7,8 @@ import (
 )
 
 const (
+	// ErrCodeParsingBody is the error code returned to the user when there is an error parsing
+	// the body of the request.
 	ErrCodeParsingBody = "error_parsing_body"
 )
 
