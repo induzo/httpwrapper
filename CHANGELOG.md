@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.4] - 2022-04-08
+
+### Documentation
+
+- Add audit badge for github workflows
+- Add example to the library
+
 ## [0.0.3] - 2022-04-07
 
 ### Documentation
